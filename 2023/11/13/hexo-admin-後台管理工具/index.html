@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>[技術]:Hexo-admin 後台管理工具 | 鍵盤寫手</title><meta name="author" content="an-chen"><meta name="copyright" content="an-chen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1.安裝管理文章後台插件雖然我們能在「本地端」先查看該部落格的樣子，但還無法進入後台來編輯管理文章，需先安裝 hexo-admin 的套件(該指令只須執行一次)。請先在 Hexo 資料夾根目錄打開命令提示字元(cmd)，輸入以下指令來安裝：  npm install hexo-admin –save  &#x2F;&#x2F;安裝 hexo-admin 文章管理的後台插件   2.進入 hexo-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[技術]:Hexo-admin 後台管理工具">
+<meta property="og:url" content="https://yuan-chenchen.github.io/abc.githun.io/2023/11/13/hexo-admin-%E5%BE%8C%E5%8F%B0%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:site_name" content="鍵盤寫手">
+<meta property="og:description" content="1.安裝管理文章後台插件雖然我們能在「本地端」先查看該部落格的樣子，但還無法進入後台來編輯管理文章，需先安裝 hexo-admin 的套件(該指令只須執行一次)。請先在 Hexo 資料夾根目錄打開命令提示字元(cmd)，輸入以下指令來安裝：  npm install hexo-admin –save  &#x2F;&#x2F;安裝 hexo-admin 文章管理的後台插件   2.進入 hexo-">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://image-cdn.learnin.tw/bnextmedia/image/album/2023-03/img-1679540937-93353.jpg?w=600&output=webp">
+<meta property="article:published_time" content="2023-11-13T07:02:26.000Z">
+<meta property="article:modified_time" content="2023-11-13T07:37:41.751Z">
+<meta property="article:author" content="an-chen">
+<meta property="article:tag" content="技術">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image-cdn.learnin.tw/bnextmedia/image/album/2023-03/img-1679540937-93353.jpg?w=600&output=webp"><link rel="shortcut icon" href="/abc.githun.io/img/favicon.png"><link rel="canonical" href="https://yuan-chenchen.github.io/abc.githun.io/2023/11/13/hexo-admin-%E5%BE%8C%E5%8F%B0%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/abc.githun.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/abc.githun.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '[技術]:Hexo-admin 後台管理工具',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-13 15:37:41'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://image-cdn.learnin.tw/bnextmedia/image/album/2023-03/img-1679540937-93353.jpg?w=600&amp;output=webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/abc.githun.io/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/abc.githun.io/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/abc.githun.io/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/abc.githun.io/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://printingbanana.com/blog/wp-content/uploads/2019/03/StockSnap_GPHSEEFYSJ-1024x768.jpg')"><nav id="nav"><span id="blog-info"><a href="/abc.githun.io/" title="鍵盤寫手"><span class="site-name">鍵盤寫手</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/abc.githun.io/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">[技術]:Hexo-admin 後台管理工具</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-11-13T07:02:26.000Z" title="Created 2023-11-13 15:02:26">2023-11-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-11-13T07:37:41.751Z" title="Updated 2023-11-13 15:37:41">2023-11-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="[技術]:Hexo-admin 後台管理工具"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="1-安裝管理文章後台插件"><a href="#1-安裝管理文章後台插件" class="headerlink" title="1.安裝管理文章後台插件"></a><font color=#800080>1.安裝管理文章後台插件</font></h1><p>雖然我們能在「本地端」先查看該部落格的樣子，但還無法進入後台來編輯管理文章，需先安裝 hexo-admin 的套件(該指令只須執行一次)。請先在 Hexo 資料夾根目錄打開命令提示字元(cmd)，輸入以下指令來安裝：</p>
+<blockquote>
+<p>npm install hexo-admin –save  &#x2F;&#x2F;安裝 hexo-admin 文章管理的後台插件</p>
+</blockquote>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/08/261850/original/6b7d80e82200487e3f0669b7166067da.png"></p>
+<h1 id="2-進入-hexo-admin-後台"><a href="#2-進入-hexo-admin-後台" class="headerlink" title="2.進入 hexo-admin 後台"></a><font color=#800080>2.進入 hexo-admin 後台</font></h1><p>Hexo 部落格可以在 push 到 GitHub 之前，先透過以下指令在「本地端」查看該部落格的樣子。</p>
+<blockquote>
+<p>hexo s  &#x2F;&#x2F;架設本地端伺服器，也可以輸入 hexo server</p>
+</blockquote>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/261851/original/a69c7f47cde6298be2347a044bee9a50.png" alt="images"></p>
+<p>架設好本地伺服器後，在瀏覽器輸入 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 就能看到該部落格，要注意這個部落格<strong>尚未 push 到網路上</strong>，都還可以做修改。<br>本地伺服器運作的時候，不管是在後台編輯文章，還是正在修改部落樣式，只要直接按下 F5 重新整理頁面，基本上是會即時顯示新的樣式&#x2F;修改後的文章 (除非更改樣式後有語法錯誤)。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/08/261852/original/9eaf6d7b278a0c85a5ab218f509929ba.png" alt="images"><br>在網址尾端加入 &#x2F;admin (例如 <a target="_blank" rel="noopener" href="http://localhost:4000/admin">http://localhost:4000/admin</a> )就能進入後台，這裡能看到所有文章及其內容。</p>
+<p><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/08/261853/original/fbd766076f790f5a490f2e50e3e050da.png" alt="images"></p>
+<h1 id="3-新增文章並-publish-該文章"><a href="#3-新增文章並-publish-該文章" class="headerlink" title="3. 新增文章並 publish 該文章"></a><font color=#800080>3. 新增文章並 publish 該文章</font></h1><p>進入後台後，按一下左上角的”New Post”。</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/261946/original/ed21daa8e2c6946b1e03a953e1c8fe98.png" alt="images"><br>接著要先輸入該文章的「連結網址名稱」，然後按下 Enter。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/08/261947/original/050a1053206b8a37c6a24c4bbfa3fd6a.png" alt="images"><br>照理來說按下 Enter後，要直接進入編輯頁面。不過如果像筆者一樣，按下 Enter 後沒有反應者，且 cmd 視窗會出現如圖的錯誤訊息；這邊不用擔心，直接在瀏覽器按下 F5 重新整理，剛新增的文章就會出現在文章列表中了，接著點一下鉛筆符號來編輯文章。</p>
+<p><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/08/261949/original/7f072a11126a8f96a11b97859ed737e7.png" alt="images"><br>進去頁面後，再把標題列修改為「文章標題名稱」；而左方就是用 Markdown 語法來寫文章，右方會即時預覽文章(注意這裡編輯文章都是即時儲存內容的)，最後按下右上角的 Publish 來發布文章。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/08/261948/original/79e9f01c27fb7a2637114f60895ce0be.png" alt="images"><br>若前一步驟有按下「Publish」發布文章，回到 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> ，就能看到剛新增的文章。</p>
+<h1 id="4-停止本地伺服器"><a href="#4-停止本地伺服器" class="headerlink" title="4. 停止本地伺服器"></a><font color=#800080>4. 停止本地伺服器</font></h1><p>若要 push 到 GitHub 上，還是要先停止本地伺服器的運作；要停止本地伺服器，只要在命令提示字元的畫面中按下 Ctrl+C，然後再按一次 Ctrl+C 或輸入 Y 來停止。</p>
+<h1 id="5-部署至-GitHub"><a href="#5-部署至-GitHub" class="headerlink" title="5. 部署至 GitHub"></a><font color=#800080>5. 部署至 GitHub</font></h1><p>部署至 GitHub的三個指令如下：</p>
+<blockquote>
+<p>hexo cl  &#x2F;&#x2F;清除之前建立的靜態檔案，也可以輸入 hexo clean</p>
+</blockquote>
+<blockquote>
+<p>hexo g  &#x2F;&#x2F;建立靜態檔案，也可以輸入 hexo generate</p>
+</blockquote>
+<blockquote>
+<p>hexo d  &#x2F;&#x2F;部署至 Github Pages，也可以輸入 hexo deploy</p>
+</blockquote>
+<p>部署完成後，到自己的 github.io 就能看到剛新增的文章摟！</p>
+<h1 id="加入「Read-More」來截斷文章"><a href="#加入「Read-More」來截斷文章" class="headerlink" title="加入「Read More」來截斷文章"></a>加入「Read More」來截斷文章</h1><p>部落格首頁的預設是會顯示 10 篇最新發布的文章，如果每篇文章都照原始篇幅來顯示，那麼首頁就會非常非常的長。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/08/261958/original/0e969d0aa238713e0f2157a6944d1dd3.png" alt="images"></p>
+<p>要解決這個問題，只要在指定位置加入 <span id="more"></span>，也就是「繼續閱讀」的語法，就能在首頁隱藏文章以下的部分。</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/261959/original/9f1672e6d7a6fc522cec3ecdb411bec6.png" alt="images"><br>回到首頁後，文章多餘的部分會被隱藏。如果要閱讀更多內容，除了能點選「Read More」，也能點選文章的標題。</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/261960/original/ab73c6842eae6c6ea82ec29dfb357edf.png" alt="images"></p>
+<h1 id="文章狀態在-Hexo-資料夾中的架構"><a href="#文章狀態在-Hexo-資料夾中的架構" class="headerlink" title="文章狀態在 Hexo 資料夾中的架構"></a>文章狀態在 Hexo 資料夾中的架構</h1><p>所有的文章包含未發布、已發布、已刪除的文章，都會以不同資料夾做區分，被放在 &#x2F;Hexo資料夾&#x2F;source 之下(如下圖)。要注意的是，雖然從後台刪除了文章，但其實文章還是會被存放在 &#x2F;Hexo資料夾&#x2F;source&#x2F;_discarded 中。</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/261961/original/ec16d7be3e5e4c5f71dc134fcacaaeb2.png" alt="images"><br>另外，文章的檔案是以「連結網址名稱」來命名，所以如果要修改文章連結，後台是無法修改的，需直接修改檔名。<br><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/08/261962/original/14bbc965f6864269c24064ab4558733f.png" alt="images"></p>
+<h2 id="如何不在家，也能隨時隨地寫文章？-同步-Hexo-資料夾到所有裝置上：而同步方式又有兩種方法："><a href="#如何不在家，也能隨時隨地寫文章？-同步-Hexo-資料夾到所有裝置上：而同步方式又有兩種方法：" class="headerlink" title="如何不在家，也能隨時隨地寫文章？+ 同步 Hexo 資料夾到所有裝置上：而同步方式又有兩種方法："></a>如何不在家，也能隨時隨地寫文章？+ 同步 Hexo 資料夾到所有裝置上：而同步方式又有兩種方法：</h2><p>一種是透過雲端硬碟(Google Drive, Dropbox等)的應用程式同步功能，這種方法筆者沒有試過，因為 Hexo 資料夾內有數萬個檔案，如果常部署的人，雲端硬碟就會頻繁同步檔案，會十分吃資源。</p>
+<p>而另外一種方法則是直接複製整個 Hexo 資料夾到隨身碟，這樣的好處是資料會跟著隨身碟到處跑，但務必保持整個資料夾定期備份的好習慣。</p>
+<p>PS. 貼心提醒：備份的方式，建議可以先執行 hexo cl 清除暫存檔，再將整個資料夾壓縮成一個壓縮檔唷！</p>
+<p>然後在目標電腦上一樣安裝以下軟體：</p>
+<ol>
+<li>Node.js</li>
+<li>Git</li>
+<li>vs code++ (文字編輯器，建議安裝；如果使用者有自己習慣使用的文字編輯器則不用裝)</li>
+</ol>
+<p>接著在命令提示字元(cmd)，輸入以下指令安裝 Hexo，整個環境就算安裝完成。</p>
+<blockquote>
+<p>npm install -g hexo-cli</p>
+</blockquote>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/07/260731/original/9875f1ae9febd27ddee61157dbe719af.png?1562918224" alt="images"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://yuan-chenchen.github.io/abc.githun.io">an-chen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://yuan-chenchen.github.io/abc.githun.io/2023/11/13/hexo-admin-%E5%BE%8C%E5%8F%B0%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/">https://yuan-chenchen.github.io/abc.githun.io/2023/11/13/hexo-admin-%E5%BE%8C%E5%8F%B0%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://image-cdn.learnin.tw/bnextmedia/image/album/2023-03/img-1679540937-93353.jpg?w=600&amp;output=webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/abc.githun.io/2023/11/13/%E4%BD%BF%E7%94%A8hexo-git-hub-%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/" title="[技術]:HEXO GITHUB 架設網站"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">[技術]:HEXO GITHUB 架設網站</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://image-cdn.learnin.tw/bnextmedia/image/album/2023-03/img-1679540937-93353.jpg?w=600&amp;output=webp" onerror="this.onerror=null;this.src='/abc.githun.io/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">an-chen</div><div class="author-info__description">xxx</div></div><div class="card-info-data site-data is-center"><a href="/abc.githun.io/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a><a href="/abc.githun.io/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/abc.githun.io/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%9D%E7%AE%A1%E7%90%86%E6%96%87%E7%AB%A0%E5%BE%8C%E5%8F%B0%E6%8F%92%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">1.安裝管理文章後台插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E9%80%B2%E5%85%A5-hexo-admin-%E5%BE%8C%E5%8F%B0"><span class="toc-number">2.</span> <span class="toc-text">2.進入 hexo-admin 後台</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0%E4%B8%A6-publish-%E8%A9%B2%E6%96%87%E7%AB%A0"><span class="toc-number">3.</span> <span class="toc-text">3. 新增文章並 publish 該文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E5%81%9C%E6%AD%A2%E6%9C%AC%E5%9C%B0%E4%BC%BA%E6%9C%8D%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">4. 停止本地伺服器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E9%83%A8%E7%BD%B2%E8%87%B3-GitHub"><span class="toc-number">5.</span> <span class="toc-text">5. 部署至 GitHub</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A0%E5%85%A5%E3%80%8CRead-More%E3%80%8D%E4%BE%86%E6%88%AA%E6%96%B7%E6%96%87%E7%AB%A0"><span class="toc-number">6.</span> <span class="toc-text">加入「Read More」來截斷文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E7%8B%80%E6%85%8B%E5%9C%A8-Hexo-%E8%B3%87%E6%96%99%E5%A4%BE%E4%B8%AD%E7%9A%84%E6%9E%B6%E6%A7%8B"><span class="toc-number">7.</span> <span class="toc-text">文章狀態在 Hexo 資料夾中的架構</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%B8%8D%E5%9C%A8%E5%AE%B6%EF%BC%8C%E4%B9%9F%E8%83%BD%E9%9A%A8%E6%99%82%E9%9A%A8%E5%9C%B0%E5%AF%AB%E6%96%87%E7%AB%A0%EF%BC%9F-%E5%90%8C%E6%AD%A5-Hexo-%E8%B3%87%E6%96%99%E5%A4%BE%E5%88%B0%E6%89%80%E6%9C%89%E8%A3%9D%E7%BD%AE%E4%B8%8A%EF%BC%9A%E8%80%8C%E5%90%8C%E6%AD%A5%E6%96%B9%E5%BC%8F%E5%8F%88%E6%9C%89%E5%85%A9%E7%A8%AE%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-number">7.1.</span> <span class="toc-text">如何不在家，也能隨時隨地寫文章？+ 同步 Hexo 資料夾到所有裝置上：而同步方式又有兩種方法：</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/abc.githun.io/2023/11/13/hexo-admin-%E5%BE%8C%E5%8F%B0%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="[技術]:Hexo-admin 後台管理工具">[技術]:Hexo-admin 後台管理工具</a><time datetime="2023-11-13T07:02:26.000Z" title="Created 2023-11-13 15:02:26">2023-11-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/abc.githun.io/2023/11/13/%E4%BD%BF%E7%94%A8hexo-git-hub-%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/" title="[技術]:HEXO GITHUB 架設網站">[技術]:HEXO GITHUB 架設網站</a><time datetime="2023-11-13T04:29:00.000Z" title="Created 2023-11-13 12:29:00">2023-11-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/abc.githun.io/2023/11/10/post-title/" title="Untitled">Untitled</a><time datetime="2023-11-10T09:28:15.548Z" title="Created 2023-11-10 17:28:15">2023-11-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/abc.githun.io/2023/11/10/hello-world/" title="Untitled">Untitled</a><time datetime="2023-11-10T06:57:25.860Z" title="Created 2023-11-10 14:57:25">2023-11-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By an-chen</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/abc.githun.io/js/utils.js"></script><script src="/abc.githun.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
