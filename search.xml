@@ -1,6 +1,256 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>front-matter and markdown</title>
+    <url>/abc.githun.io/2023/11/21/2023-11-21/</url>
+    <content><![CDATA[<h1 id="Page-Front-matter-用於頁面配置"><a href="#Page-Front-matter-用於頁面配置" class="headerlink" title="Page Front-matter    用於頁面配置"></a>Page Front-matter    用於頁面配置</h1><hr>
+<table>
+<thead>
+<tr>
+<th align="center">語法</th>
+<th align="center">定義</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">title:</td>
+<td align="center">【必需】頁面標題</td>
+</tr>
+<tr>
+<td align="center">date:</td>
+<td align="center">【必需】頁面創建日期</td>
+</tr>
+<tr>
+<td align="center">updated:</td>
+<td align="center">【可選】頁面更新日期</td>
+</tr>
+<tr>
+<td align="center">type:</td>
+<td align="center">【必需】標籤、分類和友情鏈接三個頁面需要配置</td>
+</tr>
+<tr>
+<td align="center">comments:</td>
+<td align="center">【可選】顯示頁面評論模塊 (默認 true)</td>
+</tr>
+<tr>
+<td align="center">description:</td>
+<td align="center">【可選】頁面描述</td>
+</tr>
+<tr>
+<td align="center">keywords:</td>
+<td align="center">【可選】頁面關鍵字</td>
+</tr>
+<tr>
+<td align="center">top_img:</td>
+<td align="center">【可選】頁面頂部圖片</td>
+</tr>
+<tr>
+<td align="center">mathjax:</td>
+<td align="center">【可選】顯示mathjax (當設置mathjax的 per_page: false時，才需要配置，默認 false)</td>
+</tr>
+<tr>
+<td align="center">katex:</td>
+<td align="center">【可選】顯示katex (當設置katex的per_page: false時，才需要配置，默認 false)</td>
+</tr>
+<tr>
+<td align="center">aside:</td>
+<td align="center">【可選】顯示側邊欄 (默認 true)</td>
+</tr>
+<tr>
+<td align="center">aplayer:</td>
+<td align="center">【可選】在需要的頁面加載aplayer的js和css</td>
+</tr>
+<tr>
+<td align="center">highlight_shrink:</td>
+<td align="center">【可選】配置代碼框是否展開 (true&#x2F;false) (默認為設置中highlight_shrink的配置)</td>
+</tr>
+<tr>
+<td align="center">random:</td>
+<td align="center">【可選】配置友情鏈接是否隨機排序（默認為 false)</td>
+</tr>
+</tbody></table>
+<h1 id="Post-Front-matter-用於文章頁配置"><a href="#Post-Front-matter-用於文章頁配置" class="headerlink" title="Post Front-matter 用於文章頁配置"></a>Post Front-matter 用於文章頁配置</h1><hr>
+<table>
+<thead>
+<tr>
+<th align="center">語法</th>
+<th align="center">定義</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">title:</td>
+<td align="center">【必需】文章標題</td>
+</tr>
+<tr>
+<td align="center">date:</td>
+<td align="center">【必需】文章創建日期</td>
+</tr>
+<tr>
+<td align="center">updated:</td>
+<td align="center">【可選】文章更新日期</td>
+</tr>
+<tr>
+<td align="center">tags:</td>
+<td align="center">【可選】文章標籤</td>
+</tr>
+<tr>
+<td align="center">categories:</td>
+<td align="center">【可選】文章分類</td>
+</tr>
+<tr>
+<td align="center">keywords:</td>
+<td align="center">【可選】文章關鍵字</td>
+</tr>
+<tr>
+<td align="center">description:</td>
+<td align="center">【可選】文章描述</td>
+</tr>
+<tr>
+<td align="center">top_img:</td>
+<td align="center">【可選】文章頂部圖片</td>
+</tr>
+<tr>
+<td align="center">comments:</td>
+<td align="center">【可選】顯示文章評論模塊(默認 true)</td>
+</tr>
+<tr>
+<td align="center">cover:</td>
+<td align="center">【可選】文章縮略圖(如果沒有設置top_img,文章頁頂部將顯示縮略圖，可設為false&#x2F;圖片地址&#x2F;留空)</td>
+</tr>
+<tr>
+<td align="center">toc:</td>
+<td align="center">【可選】顯示文章TOC(默認為設置中toc的enable配置)</td>
+</tr>
+<tr>
+<td align="center">toc_number:</td>
+<td align="center">【可選】顯示toc_number(默認為設置中toc的number配置)</td>
+</tr>
+<tr>
+<td align="center">toc_style_simple:</td>
+<td align="center">【可選】顯示 toc 簡潔模式</td>
+</tr>
+<tr>
+<td align="center">copyright:</td>
+<td align="center">【可選】顯示文章版權模塊(默認為設置中post_copyright的enable配置)</td>
+</tr>
+<tr>
+<td align="center">copyright_author:</td>
+<td align="center">【可選】文章版權模塊的文章作者</td>
+</tr>
+<tr>
+<td align="center">copyright_author_href:</td>
+<td align="center">【可選】文章版權模塊的文章作者鏈接</td>
+</tr>
+<tr>
+<td align="center">copyright_url:</td>
+<td align="center">【可選】文章版權模塊的文章連結鏈接</td>
+</tr>
+<tr>
+<td align="center">copyright_info:</td>
+<td align="center">【可選】文章版權模塊的版權聲明文字</td>
+</tr>
+<tr>
+<td align="center">mathjax:</td>
+<td align="center">【可選】顯示mathjax(當設置 mathjax 的 per_page: false 時，才需要配置，默認 false )</td>
+</tr>
+<tr>
+<td align="center">katex:</td>
+<td align="center">【可選】顯示 katex (當設置 katex 的</td>
+</tr>
+<tr>
+<td align="center">aplayer:</td>
+<td align="center">【可選】在需要的頁面加載 aplayer 的 js 和 css,請參考文章下面的音樂 配置</td>
+</tr>
+<tr>
+<td align="center">highlight_shrink:</td>
+<td align="center">【可選】配置代碼框是否展開(true&#x2F;false)(默認為設置中 highlight_shrink 的配置)</td>
+</tr>
+<tr>
+<td align="center">aside:</td>
+<td align="center">【可選】顯示側邊欄 (默認 true)</td>
+</tr>
+<tr>
+<td align="center">abcjs:</td>
+<td align="center">【可選】加載 abcjs (當設置 abcjs 的</td>
+</tr>
+</tbody></table>
+<h1 id="markdown-基本語法"><a href="#markdown-基本語法" class="headerlink" title="markdown 基本語法"></a>markdown 基本語法</h1><hr>
+<table>
+<thead>
+<tr>
+<th align="center">語法</th>
+<th align="center">定義</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">標題</td>
+<td align="center">文字行下方空格單獨- - -</td>
+</tr>
+<tr>
+<td align="center">字體大小</td>
+<td align="center">字體前方輸入 #,##,###,####,#####,###### (h1 ,h2 ,h3 ,h4,h5,h6)</td>
+</tr>
+<tr>
+<td align="center">字體效果</td>
+<td align="center">符號包裹字體 <em>斜體</em> , <strong>粗體</strong> , <em><strong>粗斜體</strong></em>,<del>刪除縣</del>,<em>斜體1</em>,<strong>斜粗2</strong>,正常^上標^,正常<del>下標</del>,++底線++,&#x3D;&#x3D;螢光筆記&#x3D;&#x3D;</td>
+</tr>
+<tr>
+<td align="center">引文</td>
+<td align="center">字體前方輸入&gt; , &gt;&gt; , &gt;&gt;&gt;</td>
+</tr>
+<tr>
+<td align="center">標號</td>
+<td align="center">字體前方輸入 1. , 2. 3. 或 + , - , *</td>
+</tr>
+<tr>
+<td align="center">巢狀編號</td>
+<td align="center">連續相同標號會自動切換子清單</td>
+</tr>
+<tr>
+<td align="center">連結</td>
+<td align="center">[ ]中括號輸入名稱,(網址”滑鼠顯示名稱”)括號輸入網址,冒號中輸入滑鼠顯示名稱</td>
+</tr>
+<tr>
+<td align="center">超連結</td>
+<td align="center">&lt; &gt; 直接輸入網址</td>
+</tr>
+<tr>
+<td align="center">分隔線</td>
+<td align="center">單行輸入  - - - , &#x3D;&#x3D;&#x3D; , ***</td>
+</tr>
+<tr>
+<td align="center">程式碼</td>
+<td align="center">程式碼前後包裹’’’</td>
+</tr>
+<tr>
+<td align="center">圖片連結</td>
+<td align="center">[! ( 圖片 ) (圖片網址 )   ] (    網址     )</td>
+</tr>
+<tr>
+<td align="center">表格</td>
+<td align="center">使用符號:直線製作欄位文字位置</td>
+</tr>
+<tr>
+<td align="center">短區塊</td>
+<td align="center">使用’ ‘ 文字包裹</td>
+</tr>
+<tr>
+<td align="center">方格打勾</td>
+<td align="center">- [ ] ,- [x]</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Front-matter</category>
+        <category>markdown</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>Front-matter</tag>
+        <tag>markdown</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title></title>
     <url>/abc.githun.io/2023/11/10/hello-world/</url>
     <content><![CDATA[<hr>
@@ -70,8 +320,8 @@
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>技術</tag>
         <tag>hexo</tag>
+        <tag>技術</tag>
       </tags>
   </entry>
   <entry>
@@ -195,8 +445,8 @@
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>技術</tag>
         <tag>hexo</tag>
+        <tag>技術</tag>
       </tags>
   </entry>
 </search>
