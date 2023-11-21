@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title></title>
+    <url>/abc.githun.io/2023/11/10/hello-world/</url>
+    <content><![CDATA[<hr>
+<ul>
+<li>frist one blog (部落格)</li>
+</ul>
+<hr>
+<h1 id="大標題"><a href="#大標題" class="headerlink" title="大標題"></a>大標題</h1><h2 id="小標題"><a href="#小標題" class="headerlink" title="小標題"></a>小標題</h2>]]></content>
+  </entry>
+  <entry>
+    <title>[技術]:Hexo-admin 後台管理工具</title>
+    <url>/abc.githun.io/2023/11/13/hexo-admin-%E5%BE%8C%E5%8F%B0%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<h1 id="1-安裝管理文章後台插件"><a href="#1-安裝管理文章後台插件" class="headerlink" title="1.安裝管理文章後台插件"></a><font color=#800080>1.安裝管理文章後台插件</font></h1><p>雖然我們能在「本地端」先查看該部落格的樣子，但還無法進入後台來編輯管理文章，需先安裝 hexo-admin 的套件(該指令只須執行一次)。請先在 Hexo 資料夾根目錄打開命令提示字元(cmd)，輸入以下指令來安裝：</p>
+<blockquote>
+<p>npm install hexo-admin –save  &#x2F;&#x2F;安裝 hexo-admin 文章管理的後台插件</p>
+</blockquote>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/08/261850/original/6b7d80e82200487e3f0669b7166067da.png"></p>
+<h1 id="2-進入-hexo-admin-後台"><a href="#2-進入-hexo-admin-後台" class="headerlink" title="2.進入 hexo-admin 後台"></a><font color=#800080>2.進入 hexo-admin 後台</font></h1><p>Hexo 部落格可以在 push 到 GitHub 之前，先透過以下指令在「本地端」查看該部落格的樣子。</p>
+<blockquote>
+<p>hexo s  &#x2F;&#x2F;架設本地端伺服器，也可以輸入 hexo server </p>
+</blockquote>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/261851/original/a69c7f47cde6298be2347a044bee9a50.png" alt="images"></p>
+<p>架設好本地伺服器後，在瀏覽器輸入 <a href="http://localhost:4000/">http://localhost:4000</a> 就能看到該部落格，要注意這個部落格<strong>尚未 push 到網路上</strong>，都還可以做修改。<br>本地伺服器運作的時候，不管是在後台編輯文章，還是正在修改部落樣式，只要直接按下 F5 重新整理頁面，基本上是會即時顯示新的樣式&#x2F;修改後的文章 (除非更改樣式後有語法錯誤)。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/08/261852/original/9eaf6d7b278a0c85a5ab218f509929ba.png" alt="images"><br>在網址尾端加入 &#x2F;admin (例如 <a href="http://localhost:4000/admin">http://localhost:4000/admin</a> )就能進入後台，這裡能看到所有文章及其內容。</p>
+<p><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/08/261853/original/fbd766076f790f5a490f2e50e3e050da.png" alt="images"></p>
+<h1 id="3-新增文章並-publish-該文章"><a href="#3-新增文章並-publish-該文章" class="headerlink" title="3. 新增文章並 publish 該文章"></a><font color=#800080>3. 新增文章並 publish 該文章</font></h1><p>進入後台後，按一下左上角的”New Post”。</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/261946/original/ed21daa8e2c6946b1e03a953e1c8fe98.png" alt="images"><br>接著要先輸入該文章的「連結網址名稱」，然後按下 Enter。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/08/261947/original/050a1053206b8a37c6a24c4bbfa3fd6a.png" alt="images"><br>照理來說按下 Enter後，要直接進入編輯頁面。不過如果像筆者一樣，按下 Enter 後沒有反應者，且 cmd 視窗會出現如圖的錯誤訊息；這邊不用擔心，直接在瀏覽器按下 F5 重新整理，剛新增的文章就會出現在文章列表中了，接著點一下鉛筆符號來編輯文章。</p>
+<p><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/08/261949/original/7f072a11126a8f96a11b97859ed737e7.png" alt="images"><br>進去頁面後，再把標題列修改為「文章標題名稱」；而左方就是用 Markdown 語法來寫文章，右方會即時預覽文章(注意這裡編輯文章都是即時儲存內容的)，最後按下右上角的 Publish 來發布文章。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/08/261948/original/79e9f01c27fb7a2637114f60895ce0be.png" alt="images"><br>若前一步驟有按下「Publish」發布文章，回到 <a href="http://localhost:4000/">http://localhost:4000</a> ，就能看到剛新增的文章。</p>
+<h1 id="4-停止本地伺服器"><a href="#4-停止本地伺服器" class="headerlink" title="4. 停止本地伺服器"></a><font color=#800080>4. 停止本地伺服器</font></h1><p>若要 push 到 GitHub 上，還是要先停止本地伺服器的運作；要停止本地伺服器，只要在命令提示字元的畫面中按下 Ctrl+C，然後再按一次 Ctrl+C 或輸入 Y 來停止。</p>
+<h1 id="5-部署至-GitHub"><a href="#5-部署至-GitHub" class="headerlink" title="5. 部署至 GitHub"></a><font color=#800080>5. 部署至 GitHub</font></h1><p>部署至 GitHub的三個指令如下：</p>
+<blockquote>
+<p>hexo cl  &#x2F;&#x2F;清除之前建立的靜態檔案，也可以輸入 hexo clean</p>
+</blockquote>
+<blockquote>
+<p>hexo g  &#x2F;&#x2F;建立靜態檔案，也可以輸入 hexo generate</p>
+</blockquote>
+<blockquote>
+<p>hexo d  &#x2F;&#x2F;部署至 Github Pages，也可以輸入 hexo deploy</p>
+</blockquote>
+<p>部署完成後，到自己的 github.io 就能看到剛新增的文章摟！</p>
+<h1 id="加入「Read-More」來截斷文章"><a href="#加入「Read-More」來截斷文章" class="headerlink" title="加入「Read More」來截斷文章"></a>加入「Read More」來截斷文章</h1><p>部落格首頁的預設是會顯示 10 篇最新發布的文章，如果每篇文章都照原始篇幅來顯示，那麼首頁就會非常非常的長。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/08/261958/original/0e969d0aa238713e0f2157a6944d1dd3.png" alt="images"></p>
+<p>要解決這個問題，只要在指定位置加入 <span id="more"></span>，也就是「繼續閱讀」的語法，就能在首頁隱藏文章以下的部分。</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/261959/original/9f1672e6d7a6fc522cec3ecdb411bec6.png" alt="images"><br>回到首頁後，文章多餘的部分會被隱藏。如果要閱讀更多內容，除了能點選「Read More」，也能點選文章的標題。</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/261960/original/ab73c6842eae6c6ea82ec29dfb357edf.png" alt="images"></p>
+<h1 id="文章狀態在-Hexo-資料夾中的架構"><a href="#文章狀態在-Hexo-資料夾中的架構" class="headerlink" title="文章狀態在 Hexo 資料夾中的架構"></a>文章狀態在 Hexo 資料夾中的架構</h1><p>所有的文章包含未發布、已發布、已刪除的文章，都會以不同資料夾做區分，被放在 &#x2F;Hexo資料夾&#x2F;source 之下(如下圖)。要注意的是，雖然從後台刪除了文章，但其實文章還是會被存放在 &#x2F;Hexo資料夾&#x2F;source&#x2F;_discarded 中。</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/08/261961/original/ec16d7be3e5e4c5f71dc134fcacaaeb2.png" alt="images"><br>另外，文章的檔案是以「連結網址名稱」來命名，所以如果要修改文章連結，後台是無法修改的，需直接修改檔名。<br><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/08/261962/original/14bbc965f6864269c24064ab4558733f.png" alt="images"></p>
+<h2 id="如何不在家，也能隨時隨地寫文章？-同步-Hexo-資料夾到所有裝置上：而同步方式又有兩種方法："><a href="#如何不在家，也能隨時隨地寫文章？-同步-Hexo-資料夾到所有裝置上：而同步方式又有兩種方法：" class="headerlink" title="如何不在家，也能隨時隨地寫文章？+ 同步 Hexo 資料夾到所有裝置上：而同步方式又有兩種方法："></a>如何不在家，也能隨時隨地寫文章？+ 同步 Hexo 資料夾到所有裝置上：而同步方式又有兩種方法：</h2><p>一種是透過雲端硬碟(Google Drive, Dropbox等)的應用程式同步功能，這種方法筆者沒有試過，因為 Hexo 資料夾內有數萬個檔案，如果常部署的人，雲端硬碟就會頻繁同步檔案，會十分吃資源。</p>
+<p>而另外一種方法則是直接複製整個 Hexo 資料夾到隨身碟，這樣的好處是資料會跟著隨身碟到處跑，但務必保持整個資料夾定期備份的好習慣。</p>
+<p>PS. 貼心提醒：備份的方式，建議可以先執行 hexo cl 清除暫存檔，再將整個資料夾壓縮成一個壓縮檔唷！</p>
+<p>然後在目標電腦上一樣安裝以下軟體：</p>
+<ol>
+<li>Node.js</li>
+<li>Git</li>
+<li>vs code++ (文字編輯器，建議安裝；如果使用者有自己習慣使用的文字編輯器則不用裝)</li>
+</ol>
+<p>接著在命令提示字元(cmd)，輸入以下指令安裝 Hexo，整個環境就算安裝完成。</p>
+<blockquote>
+<p>npm install -g hexo-cli</p>
+</blockquote>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/07/260731/original/9875f1ae9febd27ddee61157dbe719af.png?1562918224" alt="images"></p>
+]]></content>
+      <categories>
+        <category>技術</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>技術</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/abc.githun.io/2023/11/10/post-title/</url>
+    <content><![CDATA[<hr>
+<h2 id="title-date-2023-11-10-17-28-15-tags"><a href="#title-date-2023-11-10-17-28-15-tags" class="headerlink" title="title: date: 2023-11-10 17:28:15 tags:"></a>title:<br> date: 2023-11-10 17:28:15<br> tags:</h2>]]></content>
+  </entry>
+  <entry>
+    <title>[技術]:HEXO GITHUB 架設網站</title>
+    <url>/abc.githun.io/2023/11/13/%E4%BD%BF%E7%94%A8hexo-git-hub-%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/</url>
+    <content><![CDATA[<p><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/07/261667/original/f83071ffb726a0af8c3470cea40cde57.png" alt="圖片"></p>
+<h1 id="介紹安裝"><a href="#介紹安裝" class="headerlink" title=" 介紹安裝"></a><font color=#800000> 介紹安裝</font></h1><h2 id="導讀"><a href="#導讀" class="headerlink" title="導讀 :"></a><em>導讀</em> :</h2><p>如果想要架設自己專屬的部落格該怎麼做呢？大部分的人會利用網路上現有的服務，例如：Blogger、痞客邦、udn部落格等平台上發文；而這類的部落格平台，最大優點就是擁有文章搜尋、文章分類、留言…等一般使用者可能會用到的功能，通通都幫你準備好了，非常方便。</p>
+<p>至於缺點呢，就是始終如一或看起來都大同小異的主題介面。另外，有些部落格為了要營利，可能在部落格邊欄和文章內安插廣告；因此接下來就要來介紹如何不靠網路上現有的 Blog 平台，自己架設一個能客製化界面的專屬部落格。</p>
+<h1 id="github-申請安裝-介紹"><a href="#github-申請安裝-介紹" class="headerlink" title="github 申請安裝 介紹"></a><font color=#800000>github 申請安裝 介紹</font></h1><h2 id="註冊帳號"><a href="#註冊帳號" class="headerlink" title="註冊帳號:"></a>註冊帳號:</h2><ul>
+<li><a href="https://github.com/">GITHUB 網址</a></li>
+</ul>
+<h2 id="建立github-pages"><a href="#建立github-pages" class="headerlink" title="建立github pages:"></a>建立github pages:</h2><p> 靜態網頁的好夥伴：Github Pages，它可以給我們託管在 GitHub 上的靜態網頁。在申請完 Github 帳號之後，點一下畫面中間的 Start a Project。</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/07/260720/original/61e62ab04f869e34bd1395b82731e19b.png" alt="圖片"></p>
+<p>接著將專案名稱取名為 username.github.io 並按下最下方的 Create repository</p>
+<p>註： <strong>username 指的是你的 GitHub 帳號</strong>，在旁邊 Owner 的地方就會顯示你的帳號。例如我的帳號是 xdxd123，那麼專案名稱就取名為 xdxd123.github.io。</p>
+<p><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/07/260722/original/6893f5d772893585be564efd54f09583.png" alt="圖片"></p>
+<p>接著進入專案，到 Settings 頁面。</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260723/original/e7da8f0c9e9629465e0f5f4fc3f069c0.png" alt="圖片"></p>
+<p>頁面往下滑，有個 GitHub Pages 設定，點一下 Choose a theme。<br><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/07/260724/original/c11565101bde07447e8ca2bee0be9582.png" alt="圖片"></p>
+<p>開新分頁後，有好幾個樣板供使用者選擇，這裡直接按下 Select theme。(這時候的樣板只是暫時，之後才會部署自己的 Hexo 部落格上來)</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/07/260725/original/56208f06d870026e9d3837d6b7f382a9.png" alt="圖片"><br>最後在網址列輸入 <a href="https://username.github.io/">https://username.github.io/</a> (username 是自己的 GitHub 帳號)，就能看到自己剛架好的 Github Pages 了唷！</p>
+<p><img src="https://cdn1-t17.techbang.com/system/attached_images/2019/07/260726/original/d473d4a00522e4fcf34907b01894a448.png" alt="圖片"></p>
+<h1 id="HEXO-申請安裝環境-介紹"><a href="#HEXO-申請安裝環境-介紹" class="headerlink" title="HEXO 申請安裝環境 介紹"></a><font color=#800000>HEXO 申請安裝環境 介紹</font></h1><h2 id="相關軟體"><a href="#相關軟體" class="headerlink" title="相關軟體"></a>相關軟體</h2><p>目前的樣板只是暫時的，我們的目標是要使用 Hexo 框架來架設部落格，最後才會部署到 GitHub Pages。接下來要建立 Hexo 環境，由於筆者是 Windows 系統，這邊以 Windows 系統來示範安裝和部署，因此需要先安裝以下軟體：</p>
+<ol>
+<li>Node.js</li>
+<li>Git</li>
+<li>VS CODE (文字編輯器，建議安裝；如果使用者有自己習慣使用的文字編輯器則不用裝)</li>
+</ol>
+<h2 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h2><p>若都安裝好了，指定一個資料夾我們可以開啟我們的終端機(命令提示字元)，並輸入以下指令安裝 Hexo：</p>
+<blockquote>
+<p>npm install hexo-cli -g</p>
+</blockquote>
+<blockquote>
+<p>hexo init blog</p>
+</blockquote>
+<blockquote>
+<p>cd blog</p>
+</blockquote>
+<blockquote>
+<p>npm install</p>
+</blockquote>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<blockquote>
+<p>HEXO server</p>
+</blockquote>
+<h2 id="設定部落格相關資訊"><a href="#設定部落格相關資訊" class="headerlink" title="設定部落格相關資訊"></a>設定部落格相關資訊</h2><p>進入剛設定好的 Hexo 資料夾之後(本範例資料夾名稱為 myblog )，先找到 _config.yml 這個檔案，然後對它點右鍵 -&gt; Edit with Notepad++ (或是用自己習慣的文字編輯器打開)。</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260732/original/9fc2d1e17fac835aa3151d70bbd2d997.png" alt="圖片"><br>打開 _config.yml 後，修改第 6~12 行資訊，輸入完記得按下 Ctrl+S 存檔：<br><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260733/original/a4bf28579048e804d781b1d25dda37c8.png" alt="圖片"></p>
+<p>接著第 16 行的地方，url 請換成自己網站的連結 <a href="https://username.github.io/">https://username.github.io/</a> ，username是自己的 GitHub 帳號。</p>
+<blockquote>
+<p>url: <a href="https://username.github.io/">https://username.github.io/</a></p>
+</blockquote>
+<p><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/07/260742/original/5f656992529e8245a79e6725385cc9f7.png" alt="圖片"></p>
+<p>這樣就初步完成部落格的個人化設定了！</p>
+<h2 id="設定部署至-GitHub-的資訊"><a href="#設定部署至-GitHub-的資訊" class="headerlink" title="設定部署至 GitHub 的資訊"></a>設定部署至 GitHub 的資訊</h2><p>接著一樣在 _config.yml，要找到部署至 github 的設定：deploy (在文件的底部)，請輸入以下設定，<strong>repo 的 username 改成自己的 GitHub 帳號</strong>，所以 repo 的連結架構長這樣： <a href="https://github.com/%E8%87%AA%E5%B7%B1%E5%B8%B3%E8%99%9F/%E5%B0%88%E6%A1%88%E5%90%8D%E7%A8%B1.git">https://github.com/自己帳號/專案名稱.git</a> ，輸入完一樣記得按下 Ctrl+S 存檔。</p>
+<blockquote>
+<p>deploy:</p>
+<blockquote>
+<p> type: git</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p> repo: <a href="https://github.com/username/username.github.io.git">https://github.com/username/username.github.io.git</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>branch: master</p>
+</blockquote>
+</blockquote>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260734/original/ffc47200c885d05688795451e8e58e27.png" alt="圖片"></p>
+<p>註：至於 _config.yml 在 deploy 的地方，為何預設只有 type 一個項目呢？這是因為 Hexo 可以部署到很多地方，GitHub 只是其中一個選項，而每個網站的設定值皆不同。</p>
+<h2 id="部署至-GitHub"><a href="#部署至-GitHub" class="headerlink" title="部署至 GitHub"></a>部署至 GitHub</h2><p>回到終端機，首先確認終端機的路徑在 myblog 資料夾根目錄下，並依序輸入以下三個指令：(輸入 hexo d 後會要求登入 GitHub 帳號，如圖所示)</p>
+<blockquote>
+<ol>
+<li>hexo cl  &#x2F;&#x2F;清除之前建立的靜態檔案，也可以輸入 hexo clean</li>
+<li>hexo g  &#x2F;&#x2F;建立靜態檔案，也可以輸入 hexo generate</li>
+<li>hexo d  &#x2F;&#x2F;部署至 Github Pages，也可以輸入 hexo deploy</li>
+</ol>
+</blockquote>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260740/original/f5221b90b385f283395b092c5878b204.png" alt="圖片"></p>
+<p>這三個缺一不可的指令，就是幫我們把網站自動生成並發佈到 <a href="https://username.github.io/">https://username.github.io</a> 上的指令，完成後就可以打開瀏覽器看看自己網站發布成功的樣子摟！</p>
+<h2 id="附錄：實用教學"><a href="#附錄：實用教學" class="headerlink" title="附錄：實用教學"></a>附錄：實用教學</h2><p>直接在指定資料夾路徑開啟終端機</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/260743/original/566a2d9f07baed839dacc729414be21a.png" alt="圖片"></p>
+<h2 id="專案名稱和部落格網址的關係"><a href="#專案名稱和部落格網址的關係" class="headerlink" title="專案名稱和部落格網址的關係"></a>專案名稱和部落格網址的關係</h2><p>前面有提到，如果你的帳號叫 xdxd123，那麼專案名稱就要叫做 xdxd123.github.io，這樣子連到該專案的網址才會是 <a href="https://xdxd123.github.io/">https://xdxd123.github.io/</a> 。那如果專案名稱不是這樣取呢？還有辦法連到這個專案的網站嗎？還是一個 GitHub 帳號只能建立一個部落格？</p>
+<p><img src="https://cdn0-t17.techbang.com/system/attached_images/2019/07/260722/original/6893f5d772893585be564efd54f09583.png" alt="圖片"><br>關於以上問題，一個 GitHub 帳號可以架設很多個網站；名稱的部分，如果我的名稱不是以 username.github.io 為命名，例如我取該專案的名稱為 hello，那麼的網址連結就會是 <a href="https://xdxd123.github.io/hello/">https://xdxd123.github.io/hello/</a> ，也就是在網址尾巴附上專案名稱。</p>
+<p>以下做簡單的整理(假設使用者名稱為 xdxd123)：</p>
+<table>
+<thead>
+<tr>
+<th>專案(repository)名稱</th>
+<th>專案連結網址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hello.github.io</td>
+<td><a href="https://xdxd123.github.io/hello.github.io/">https://xdxd123.github.io/hello.github.io/</a></td>
+</tr>
+<tr>
+<td>hello</td>
+<td><a href="https://xdxd123.github.io/hello/">https://xdxd123.github.io/hello/</a></td>
+</tr>
+<tr>
+<td>project</td>
+<td><a href="https://xdxd123.github.io/project/">https://xdxd123.github.io/project/</a></td>
+</tr>
+</tbody></table>
+<p>要注意的是，假設用專案名稱：hello 來建立 Hexo 部落格，記得 Hexo 資料夾根目錄下的 _config.yml 要修改第 16 行和第 17 行，如下圖，否則部署至 GitHub Pages 後會無法正確顯示：</p>
+<p><img src="https://cdn2-t17.techbang.com/system/attached_images/2019/07/261695/original/06f228fbb59459252395b1d842f05edf.png" alt="圖片"></p>
+]]></content>
+      <categories>
+        <category>技術</category>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>技術</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>
